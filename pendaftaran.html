@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="css/pendaftaran.css" />
+  </head>
+  <body>
+    <div class="register-container">
+      <h2>Buat Akun Baru</h2>
+      <p>Silakan isi formulir di bawah ini</p>
+      <form id="registerForm">
+        <div class="input-group">
+          <label for="fullname">Nama Lengkap</label>
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="Masukkan nama lengkap"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Masukkan email"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Masukkan username"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Masukkan password"
+            required
+          />
+        </div>
+
+        <button type="submit">Daftar</button>
+      </form>
+      <p id="error-message" class="error"></p>
+      <p class="login-link">
+        Sudah punya akun? <a href="login.html">Masuk di sini</a>
+      </p>
+    </div>
+
+    <script>
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          var fullname = document.getElementById("fullname").value;
+          var email = document.getElementById("email").value;
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+
+          if (fullname && email && username && password) {
+            alert("Pendaftaran Berhasil! Anda dapat masuk sekarang.");
+            window.location.href = "login.html";
+          } else {
+            document.getElementById("error-message").textContent =
+              "Semua bidang harus diisi!";
+          }
+        });
+    </script>
+  </body>
+</html>

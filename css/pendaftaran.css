@@ -1,20 +1,25 @@
+:root {
+  --primary: #cffafe;
+  --secondary: #67e8f9;
+  --thridth: #0072ff;
+}
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #cffafe, #67e8f9);
+  background: linear-gradient(to right, var(--primary), var(--secondary));
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
   margin: 0;
 }
 
-.login-container {
+.register-container {
   background: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
-  width: 320px;
+  width: 350px;
   animation: fadeIn 0.8s;
 }
 
@@ -43,18 +48,18 @@ input {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #ccc;
   border-radius: 5px;
   transition: 0.3s;
 }
 
 input:focus {
-  border-color: #0072ff;
+  border-color: var(--thridth);
   outline: none;
 }
 
 button {
-  background: #0072ff;
+  background: var(--thridth);
   color: white;
   padding: 10px;
   border: none;
@@ -66,7 +71,7 @@ button {
 }
 
 button:hover {
-  background: #67e8f9;
+  background: var(--secondary);
   color: #000;
 }
 
@@ -75,15 +80,15 @@ button:hover {
   margin-top: 10px;
 }
 
-.register-link {
+.login-link {
   margin-top: 15px;
 }
 
-.register-link a {
-  color: #0072ff;
+.login-link a {
+  color: var(--thridth);
   text-decoration: none;
 }
 
-.register-link a:hover {
+.login-link a:hover {
   text-decoration: underline;
 }
