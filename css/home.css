@@ -12,6 +12,8 @@
   box-sizing: 0;
   text-decoration: none;
 }
+
+/* Bagian elemen body */
 body {
   background-color: var(--primary);
   font-family: Poppins, Sans-serif;

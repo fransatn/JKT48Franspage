@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Selamat Datang</h2>
+      <p>Silakan masuk untuk melanjutkan</p>
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Masukkan username"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Masukkan password"
+            required
+          />
+        </div>
+
+        <button type="submit">Masuk</button>
+      </form>
+      <p id="error-message" class="error"></p>
+      <p class="register-link">
+        Belum punya akun? <a href="#">Daftar di sini</a>
+      </p>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+
+          if (username === "fransguero" && password === "fransguero") {
+            alert("Login Berhasil!");
+            window.location.href = "index.html";
+          } else {
+            document.getElementById("error-message").textContent =
+              "Username atau Password salah!";
+          }
+        });
+    </script>
+  </body>
+</html>
