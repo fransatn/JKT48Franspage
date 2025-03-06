@@ -5,8 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="css/login.css" />
+    <script>
+      window.onload = function () {
+        setTimeout(() => {
+          document.querySelector(".loading-screen").style.opacity = "0";
+          setTimeout(() => {
+            document.querySelector(".loading-screen").style.display = "none";
+          }, 500);
+        }, 2000);
+      };
+    </script>
   </head>
   <body>
+    <div class="loading-screen">
+      <div class="loader"></div>
+    </div>
+
     <div class="login-container">
       <h2>Selamat Datang</h2>
       <p>Silakan masuk untuk melanjutkan</p>

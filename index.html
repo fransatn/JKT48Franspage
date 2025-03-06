@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website Pribadi</title>
+    <script>
+      window.onload = function () {
+        setTimeout(() => {
+          document.querySelector(".loading-screen").style.opacity = "0";
+          setTimeout(() => {
+            document.querySelector(".loading-screen").style.display = "none";
+          }, 500);
+        }, 2000);
+      };
+    </script>
   </head>
   <!-- Poppins Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,6 +26,9 @@
   <!-- link css -->
   <link rel="stylesheet" href="css/home.css" />
   <body>
+    <div class="loading-screen">
+      <div class="loader"></div>
+    </div>
     <!-- Navbar Start -->
     <header>
       <nav class="navbar" id="navbar">

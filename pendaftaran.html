@@ -5,8 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
     <link rel="stylesheet" href="css/pendaftaran.css" />
+    <script>
+      window.onload = function () {
+        setTimeout(() => {
+          document.querySelector(".loading-screen").style.opacity = "0";
+          setTimeout(() => {
+            document.querySelector(".loading-screen").style.display = "none";
+          }, 500);
+        }, 2000);
+      };
+    </script>
   </head>
   <body>
+    <div class="loading-screen">
+      <div class="loader"></div>
+    </div>
     <div class="register-container">
       <h2>Buat Akun Baru</h2>
       <p>Silakan isi formulir di bawah ini</p>
