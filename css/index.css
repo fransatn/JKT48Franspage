@@ -47,7 +47,9 @@
 body {
   background-color: var(--primary);
   font-family: Poppins, Sans-serif;
-  min-height: 7000px;
+  min-height: 3700px;
+  margin: 0;
+  padding: 0;
 }
 
 /* Navbar Awal */
@@ -78,6 +80,7 @@ body {
   display: inline-block;
   font-size: 1.1rem;
   margin: 0 1rem;
+  font-weight: 500;
 }
 
 .navbar .navbar-nav a:hover {
@@ -90,7 +93,7 @@ body {
   padding-bottom: 0.2rem;
   border-bottom: 0.1rem solid var(--sixth);
   transform: scaleX(0);
-  transition: 0.3s linear;
+  transition: 0.4s linear;
 }
 
 .navbar .navbar-nav a:hover::after {
@@ -227,4 +230,131 @@ body {
 }
 #oniel {
   grid-area: oniel;
+}
+
+/* Bagian Section Contact*/
+#contact {
+  height: 100vh;
+  padding-top: 100px;
+  justify-self: center;
+}
+.contact-detail {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 72px;
+  column-gap: 128px;
+}
+.contact-detail > div,
+.contact-detail > form {
+  width: 50%;
+}
+#contact h1 {
+  position: relative;
+  font-size: 2rem;
+}
+#contact > h1::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: -20px;
+  top: -10px;
+}
+/* Section Contact Bagian Form */
+form {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #ffc108;
+  padding: 64px 32px;
+}
+form h1 {
+  font-size: 32px;
+  text-align: center;
+}
+form button {
+  border: none;
+}
+form button:hover {
+  cursor: pointer;
+}
+.form-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 32px;
+  margin-top: 32px;
+  grid-template-areas:
+    "name subject"
+    "email phone"
+    "message message";
+}
+/* Bagian Input Name Grid Templet */
+#input-name {
+  grid-area: name;
+}
+#input-subject {
+  grid-area: subject;
+}
+#input-email {
+  grid-area: email;
+}
+#input-phone {
+  grid-area: phone;
+}
+#input-message {
+  grid-area: message;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+.input-group label {
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+.input-group input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  background-color: var(--primary);
+}
+.input-group input:focus {
+  border-bottom: 2px solid #ffc108;
+}
+
+/* Button Class */
+.btn {
+  background: #ffc108;
+  color: #000;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: rgb(221, 181, 52);
+  color: #fff;
+}
+
+/* Bagian Footer */
+footer {
+  padding: 16px 128px;
+  background-color: #ffc108;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer p {
+  color: white;
+  width: 50%;
+}
+.social-icon {
+  display: flex;
+  gap: 32px;
 }
